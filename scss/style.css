@@ -1,0 +1,53 @@
+.side-nav {
+  background: #a4b3b6;
+  color: #d8c99b;
+  width: 15vw;
+  height: 100vh;
+  border-radius: 0 1rem 1rem 0;
+  padding: 5vh 0.5vw;
+}
+
+.logo {
+  background: #a4243b;
+  border: 2px double #bd632f;
+  -webkit-clip-path: polygon(0% 20%, 30% 0%, 70% 0%, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0% 80%);
+          clip-path: polygon(0% 20%, 30% 0%, 70% 0%, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0% 80%);
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  padding: 15%;
+}
+
+.brand-name {
+  text-transform: uppercase;
+}
+
+.social-icons {
+  padding: 1vh 0;
+  border: 1px solid #d8c99b;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.social-icons .social-icon {
+  background: #bd632f;
+  margin: 0.1vh 0;
+  -webkit-clip-path: polygon(0% 20%, 30% 0%, 70% 0%, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0% 80%);
+          clip-path: polygon(0% 20%, 30% 0%, 70% 0%, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0% 80%);
+}
+
+.social-icons .social-icon img {
+  width: 100%;
+  padding: 20%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=style.css.map */

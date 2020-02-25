@@ -1,0 +1,59 @@
+.side-nav {
+  background: $grey;
+  color: $back;
+  width: 15vw;
+  height: 100vh;
+  border-radius: 0 1rem 1rem 0;
+  padding: 5vh 0.5vw;
+}
+
+.logo {
+  background: $accent;
+  border: 2px double $secondary-color;
+  clip-path: polygon(
+    0% 20%,
+    30% 0%,
+    70% 0%,
+    100% 20%,
+    100% 80%,
+    70% 100%,
+    30% 100%,
+    0% 80%
+  );
+  img {
+    width: 100%;
+    height: auto;
+    padding: 15%;
+  }
+}
+.brand-name {
+  text-transform: uppercase;
+}
+
+.social-icons {
+  // background: $back;
+  padding: 1vh 0;
+  border: 1px solid $back;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  .social-icon {
+    background: $secondary-color;
+    margin: 0.1vh 0;
+    // display: inline-block;
+    clip-path: polygon(
+      0% 20%,
+      30% 0%,
+      70% 0%,
+      100% 20%,
+      100% 80%,
+      70% 100%,
+      30% 100%,
+      0% 80%
+    );
+    img {
+      width: 100%;
+      padding: 20%;
+    }
+  }
+}
