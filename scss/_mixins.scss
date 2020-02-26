@@ -1,0 +1,23 @@
+@mixin shape {
+  clip-path: polygon(
+    0% 20%,
+    30% 0%,
+    70% 0%,
+    100% 20%,
+    100% 80%,
+    70% 100%,
+    30% 100%,
+    0% 80%
+  );
+}
+@mixin img-size {
+  img {
+    width: 100%;
+    padding: 15%;
+  }
+}
+@mixin flex-direction-center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+}

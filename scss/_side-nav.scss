@@ -1,59 +1,129 @@
+@import "./mixins";
+
 .side-nav {
-  background: $grey;
+  background: $black;
   color: $back;
-  width: 15vw;
+  width: 5vw;
   height: 100vh;
   border-radius: 0 1rem 1rem 0;
-  padding: 5vh 0.5vw;
-}
+  padding: 2vh 0.2vw;
+  display: grid;
+  // justify-content: space-around;
+  align-content: space-between;
 
-.logo {
-  background: $accent;
-  border: 2px double $secondary-color;
-  clip-path: polygon(
-    0% 20%,
-    30% 0%,
-    70% 0%,
-    100% 20%,
-    100% 80%,
-    70% 100%,
-    30% 100%,
-    0% 80%
-  );
-  img {
-    width: 100%;
-    height: auto;
-    padding: 15%;
-  }
-}
-.brand-name {
-  text-transform: uppercase;
-}
-
-.social-icons {
-  // background: $back;
-  padding: 1vh 0;
-  border: 1px solid $back;
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
-  .social-icon {
-    background: $secondary-color;
-    margin: 0.1vh 0;
-    // display: inline-block;
-    clip-path: polygon(
-      0% 20%,
-      30% 0%,
-      70% 0%,
-      100% 20%,
-      100% 80%,
-      70% 100%,
-      30% 100%,
-      0% 80%
-    );
-    img {
+  .brand {
+    @include flex-direction-center(column);
+    text-decoration: none;
+    .logo {
       width: 100%;
-      padding: 20%;
+      background: $grey;
+      @include shape;
+      @include img-size;
+    }
+    .brand-name {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: $bolder;
+      color: $secondary-color;
+    }
+  }
+  .navbar {
+    text-align: center;
+    // border: 2px solid $secondary-color;
+    .nav-item {
+      // border: 1px solid $secondary-color;
+      margin-bottom: 0.4rem;
+      .nav-link {
+        @include flex-direction-center(column);
+        text-decoration: none;
+        .nav-icon {
+          width: 80%;
+          background: $grey;
+          @include shape;
+          @include img-size;
+        }
+        .nav-text {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .social-icons {
+    // align-self: end;
+    // background: $back;
+    padding: 1vh 0;
+    // border: 1px solid $back;
+    width: 100%;
+    @include flex-direction-center(column);
+
+    .social-icon {
+      background: $back;
+      margin: 0.1vh 0;
+
+      width: 50%;
+      @include shape;
+      @include img-size;
+    }
+  }
+
+  &:hover {
+    width: 12vw;
+    padding: 2vh 0.7vw;
+    transition: 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    .brand {
+      .logo {
+        width: 50%;
+        transition: 0.8s ease-in;
+      }
+      // .brand-name {
+      //   position: relative;
+      //   // content: attr(data-heading);
+      //   &:before {
+      //     content: attr(data-heading);
+      //     // position: absolute;
+      //     // // display: flex;
+      //     // // align-items: start;
+      //     // left: 0;
+      //     // top: 0;
+      //     // width: 100%;
+      //     // height: 100%;
+      //   }
+      // }
+    }
+    .navbar {
+      .nav-item {
+        margin-bottom: 0.4rem;
+        transition: 1s ease-in;
+        .nav-link {
+          // @include flex-direction-center(row);
+          .nav-icon {
+            width: 30%;
+          }
+          .nav-text {
+            display: block;
+            text-align: center;
+            color: $grey;
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            font-weight: $bold;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+    .social-icons {
+      padding: 0 0.1vw;
+      transition: 0.9s ease-in;
+      width: 100%;
+      @include flex-direction-center(row);
+      justify-content: center;
+      .social-icon {
+        margin: 0 0.1vw;
+        width: 20%;
+        transition: 0.7s ease-in;
+      }
     }
   }
 }
