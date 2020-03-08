@@ -1,0 +1,5 @@
+@import "./mixins";
+
+.img-responsive {
+  @include img-responsive;
+}

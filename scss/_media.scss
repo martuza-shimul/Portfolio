@@ -1,0 +1,177 @@
+@media screen and (max-width: 4000px) and (min-width: 768px) {
+  .side-nav {
+    &:hover {
+      width: 12vw;
+      padding: 2vh 0.7vw;
+      transition: 1.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      .brand {
+        .logo {
+          width: 50%;
+          transition: 0.8s ease-in;
+        }
+        .brand-name {
+          @include flex-direction-center(row);
+        }
+        // .brand-name {
+        //   position: relative;
+        //   // content: attr(data-heading);
+        //   &:before {
+        //     content: attr(data-heading);
+        //     // position: absolute;
+        //     // // display: flex;
+        //     // // align-items: start;
+        //     // left: 0;
+        //     // top: 0;
+        //     // width: 100%;
+        //     // height: 100%;
+        //   }
+        // }
+      }
+      .navbar {
+        // display: none;
+        .nav-item {
+          margin-bottom: 0.4rem;
+          transition: 1s ease-in;
+          .nav-link {
+            // @include flex-direction-center(row);
+
+            .nav-icon {
+              width: 30%;
+            }
+            .nav-text {
+              display: block;
+              text-align: center;
+              font-size: 1.1rem;
+              line-height: 2rem;
+              font-weight: 700;
+              letter-spacing: 1px;
+              font-family: monospace;
+            }
+          }
+          &:hover {
+            .nav-icon {
+              background: $grey;
+              transition: 0.5s ease-in;
+            }
+            .nav-text {
+              color: $white;
+            }
+          }
+        }
+      }
+      .social-icons {
+        padding: 0 0.1vw;
+        transition: 0.9s ease-in;
+        width: 100%;
+        @include flex-direction-center(row);
+        justify-content: center;
+        .social-icon {
+          margin: 0 0.1vw;
+          width: 20%;
+          transition: 0.7s ease-in;
+
+          &:hover {
+            background: $white;
+            transform: translateY(-5px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .side-nav {
+    &:hover {
+      width: 15vw;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .side-nav {
+    position: relative;
+    width: 100vw;
+    margin: 0 auto;
+    height: 15vh;
+    border-radius: 0;
+    padding: 0;
+    @include flex-direction-center(column);
+    align-items: flex-start;
+
+    .brand {
+      @include flex-direction-center(row);
+      // border: 2px solid $grey;
+      padding: 1vh 7vw;
+      justify-content: space-between;
+
+      .logo {
+        width: 10%;
+        // @include img-responsive;
+      }
+
+      .brand-name {
+        margin-left: 10px;
+        @include flex-direction-center(row);
+      }
+    }
+    .toggle {
+      // border: 2px solid $grey;
+      cursor: pointer;
+      display: block;
+      @include img-size;
+      width: 10%;
+      // justify-items: flex-end;
+      // position: absolute;
+      // top: 0.5%;
+      // right: 1.5%;
+    }
+    .navbar {
+      display: none;
+      // border: 2px solid $grey;
+      width: 100%;
+      // min-height: 90vh;
+      // padding: 2vh 0;
+      // background: $primary-color;
+
+      // .nav-links {
+      //   // @include flex-direction-center(column);
+      //   // justify-content: space-evenly;
+      // }
+
+      .nav-item {
+        // border: 1px solid $secondary-color;
+        margin-bottom: 0.4rem;
+
+        .nav-link {
+          .nav-icon {
+            width: 15%;
+          }
+          .nav-text {
+            display: block;
+            text-align: center;
+            font-size: 1.3rem;
+            line-height: 2.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-family: monospace;
+          }
+        }
+      }
+    }
+    .social-icons {
+      // border: 2px solid $grey;
+      // padding: 1vh;
+      // background: $primary-color;
+      @include flex-direction-center(row);
+      // height: 100vh;
+      // align-items: flex-start;
+      display: none;
+      justify-content: center;
+
+      .social-icon {
+        width: 10%;
+        margin: 0.2vh 0.5vw;
+      }
+    }
+  }
+}

@@ -1,9 +1,14 @@
+@import "./mixins";
 @import "./variable";
 @import "./side-nav";
+@import "./media";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
+}
+body {
+  background: $grey;
 }

@@ -16,8 +16,18 @@
     padding: 15%;
   }
 }
+@mixin img-responsive {
+  width: 100%;
+  height: auto;
+}
 @mixin flex-direction-center($direction) {
   display: flex;
   flex-direction: $direction;
   align-items: center;
+}
+
+@mixin font-size($name) {
+  font-size: $name;
+  // line-height: calc(#{$name} + 1.5rem);
+  line-height: $name * 1.5;
 }
