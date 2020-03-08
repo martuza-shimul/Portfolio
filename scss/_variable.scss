@@ -1,10 +1,21 @@
-$primary-color: #273e47;
-$secondary-color: #bd632f;
-$accent: #a4243b;
+//================= colors ============================
+// $primary-color: #273e47;
+$primary-color: #2f2fa2;
+$secondary-color: #f64c72;
+// $secondary-color: #bd632f;
+$accent: #553d67;
+// $accent: #a4243b;
 $black: #2a1b3d;
 $grey: #a4b3b6;
 $back: #d8c99b;
 
+// =========================font weight==================
 $normal: 500;
 $bold: 700;
 $bolder: 900;
+
+//=========================font-sizes=======================
+$display: 4.5rem;
+$header: 2.7rem;
+$sub-header: 1.6rem;
+$base: 1rem;
