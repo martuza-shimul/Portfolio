@@ -1,83 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Martuza Live | Martuza Shimul</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Martuza Live | Martuza Shimul</title>
 
-    <link rel="stylesheet" href="./scss/style.css" />
-  </head>
-  <body>
-    <section class="side-nav nav-bar">
-      <a href="#" class="brand">
-        <div class="logo">
-          <img src="./img/logo.svg" alt="Martuza Shimul logo" />
-        </div>
-        <!-- <div class="brand-name" data-heading="Martuza Shimul">M s</div> -->
-        <div class="brand-name">
-          <p>Martuza</p>
-          <p class="rotate">.live</p>
-        </div>
-        <div class="toggle">
-          <img src="./img/menu.svg" alt="menu icon" class="img-responsive " />
-        </div>
-      </a>
-      <div class="line"></div>
-      <div class="navbar">
-        <ul class="nav-links">
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <p class="nav-icon">
-                <img src="./img/about.svg" alt="Martuza Shimul About Icon" />
-              </p>
-              <p class="nav-text">About</p>
-            </a>
-          </li>
+		<link rel="stylesheet" href="./scss/style.css" />
+	</head>
+	<body>
+		<section class="side-nav nav-bar">
+			<a href="#" class="brand">
+				<div class="logo">
+					<img src="./img/logo.svg" alt="Martuza Shimul logo" />
+				</div>
+				<!-- <div class="brand-name" data-heading="Martuza Shimul">M s</div> -->
+				<div class="brand-name">
+					<p>Martuza</p>
+					<p class="rotate">.live</p>
+				</div>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <p class="nav-icon">
-                <img src="./img/about.svg" alt="Martuza Shimul About Icon" />
-              </p>
-              <p class="nav-text">Experience</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <p class="nav-icon">
-                <img src="./img/about.svg" alt="Martuza Shimul About Icon" />
-              </p>
-              <p class="nav-text">About</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <p class="nav-icon">
-                <img src="./img/about.svg" alt="Martuza Shimul About Icon" />
-              </p>
-              <p class="nav-text">How it works</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="line"></div>
-      <div class="social-icons">
-        <div class="social-icon">
-          <a href="https://www.facebook.com/martuza.shimul">
-            <img src="./img/facebook.svg" alt="Martuza Shimul social-icon" />
-          </a>
-        </div>
-        <div class="social-icon">
-          <a href="https://www.facebook.com/martuza.shimul">
-            <img src="./img/facebook.svg" alt="Martuza Shimul social-icon" />
-          </a>
-        </div>
-        <div class="social-icon">
-          <a href="https://www.facebook.com/martuza.shimul">
-            <img src="./img/facebook.svg" alt="Martuza Shimul social-icon" />
-          </a>
-        </div>
-      </div>
-    </section>
-  </body>
+				<!-- mobile menu toggle -->
+				<div class="toggle" onclick="openMenu()">
+					<img src="./img/menu.svg" alt="menu icon" class="img-responsive" />
+				</div>
+				<!-- toggle end -->
+			</a>
+			<!-- <div class="line"></div> -->
+			<div class="navbar toggle-display">
+				<ul class="nav-links">
+					<p class="mobile-menu-close-icon" onclick="closeMenu()">
+						<img src="./img/close.svg" alt="Martuza Shimul close Icon" />
+					</p>
+					<li class="nav-item">
+						<a href="#" class="nav-link">
+							<p class="nav-icon">
+								<img src="./img/about.svg" alt="Martuza Shimul About Icon" />
+							</p>
+							<p class="nav-text">About</p>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="#" class="nav-link">
+							<p class="nav-icon">
+								<img src="./img/about.svg" alt="Martuza Shimul About Icon" />
+							</p>
+							<p class="nav-text">Experience</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">
+							<p class="nav-icon">
+								<img src="./img/about.svg" alt="Martuza Shimul About Icon" />
+							</p>
+							<p class="nav-text">Education</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">
+							<p class="nav-icon">
+								<img src="./img/about.svg" alt="Martuza Shimul About Icon" />
+							</p>
+							<p class="nav-text">Portfolio</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">
+							<p class="nav-icon">
+								<img src="./img/about.svg" alt="Martuza Shimul About Icon" />
+							</p>
+							<p class="nav-text">Contact</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="line"></div>
+			<div class="social-icons toggle-display">
+				<div class="social-icon">
+					<a href="https://www.facebook.com/martuza.shimul">
+						<img src="./img/facebook.svg" alt="Martuza Shimul social-icon" />
+					</a>
+				</div>
+				<div class="social-icon">
+					<a href="https://www.facebook.com/martuza.shimul">
+						<img src="./img/facebook.svg" alt="Martuza Shimul social-icon" />
+					</a>
+				</div>
+				<div class="social-icon">
+					<a href="https://www.facebook.com/martuza.shimul">
+						<img src="./img/facebook.svg" alt="Martuza Shimul social-icon" />
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="content"></section>
+		<script src="./js/app.js"></script>
+	</body>
 </html>

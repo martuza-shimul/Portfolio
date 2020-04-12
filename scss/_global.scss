@@ -1,5 +1,13 @@
 @import "./mixins";
 
 .img-responsive {
-  @include img-responsive;
+	@include img-responsive;
+}
+.show {
+	display: initial;
+}
+
+.content {
+	height: 5000px;
+	background: $secondary-color;
 }
