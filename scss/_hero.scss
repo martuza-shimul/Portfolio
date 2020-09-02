@@ -1,0 +1,55 @@
+@import "./mixins";
+
+.hero {
+	min-height: 40vh;
+	display: flex;
+	align-items: center;
+	// justify-content: center;
+	border-bottom: 1px solid $primary-color;
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+		url("../img/image.jpg");
+	background-size: cover;
+	background-position: 50% 50%;
+	color: $white;
+	.hero-content-wrapper {
+		p {
+			font-size: $sub-header;
+			font-weight: $medium;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			color: $grey;
+		}
+		.typing {
+			// font-size: $display;
+			@include font-size($display);
+			font-weight: $bolder;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			background-image: url("https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+			background-size: cover;
+			background-repeat: no-repeat;
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+			background-clip: text;
+
+			&::after {
+				content: "";
+				/* position: absolute; */
+				width: 1px;
+				height: 95%;
+				margin-left: 5px;
+				border-right: 2px solid $white;
+				animation: blink 0.6s infinite ease;
+			}
+
+			@keyframes blink {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

@@ -2,6 +2,7 @@
 @import "./variable";
 @import "./global";
 @import "./side-nav";
+@import "./hero";
 @import "./media";
 
 * {
@@ -11,7 +12,7 @@
 	font-size: 14px;
 }
 body {
-	background: $grey;
+	background: $white;
 	z-index: 1;
 	font-family: $body-font;
 	font-weight: $normal;
