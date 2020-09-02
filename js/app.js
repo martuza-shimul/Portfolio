@@ -3,16 +3,16 @@ const nav = document.querySelector(".side-nav .navbar");
 const social = document.querySelector(".side-nav .social-icons");
 
 const openMenu = () => {
-	nav.classList.add("show");
+	nav.classList.add("open-mobile-nav");
 	nav.classList.remove("toggle-display");
-	social.classList.remove("toggle-display");
-	social.classList.add("show");
+	social.classList.remove("toggle-display-social");
+	social.classList.add("open-mobile-social");
 };
 const closeMenu = () => {
-	nav.classList.remove("show");
+	nav.classList.remove("open-mobile-nav");
 	nav.classList.add("toggle-display");
-	social.classList.add("toggle-display");
-	social.classList.remove("show");
+	social.classList.add("toggle-display-social");
+	social.classList.remove("open-mobile-social");
 };
 
 window.addEventListener("scroll", () => {

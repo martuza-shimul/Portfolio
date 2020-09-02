@@ -99,3 +99,12 @@
 		}
 	}
 }
+
+.open-mobile-nav {
+	transform: translateY(0%);
+	transition: 0.4s ease-in-out;
+}
+.open-mobile-social {
+	transform: translateX(0%);
+	transition: 0.6s ease-in-out;
+}

@@ -202,7 +202,12 @@
 			}
 		}
 		.toggle-display {
-			display: none;
+			transform: translateY(-150%);
+			transition: 0.4s ease-in-out;
+		}
+		.toggle-display-social {
+			transform: translateX(-150%);
+			transition: 0.2s ease-in-out;
 		}
 	}
 }
