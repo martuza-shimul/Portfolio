@@ -51,5 +51,5 @@ let letter = "";
 		count++;
 		index = 0;
 	}
-	setTimeout(type, 300);
+	setTimeout(type, 350);
 })(); //this is a IFFE -- self invoced function

@@ -195,9 +195,8 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #2f2fa2;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.6))), url("../img/image.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../img/image.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(164, 179, 182, 0.4)), to(rgba(216, 201, 155, 0.4)));
+  background: linear-gradient(rgba(164, 179, 182, 0.4), rgba(216, 201, 155, 0.4));
   background-size: cover;
   background-position: 50% 50%;
   color: #f7f7f7;
@@ -208,7 +207,7 @@ h5 {
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #a4b3b6;
+  color: #2f2fa2;
 }
 
 .hero .hero-content-wrapper .typing {
@@ -231,7 +230,7 @@ h5 {
   width: 1px;
   height: 95%;
   margin-left: 5px;
-  border-right: 2px solid #f7f7f7;
+  border-right: 2px solid #2f2fa2;
   -webkit-animation: blink 0.6s infinite ease;
           animation: blink 0.6s infinite ease;
 }
