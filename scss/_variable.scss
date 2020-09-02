@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+
 //================= colors ============================
 // $primary-color: #273e47;
 $primary-color: #2f2fa2;
@@ -8,12 +10,20 @@ $accent: #553d67;
 $black: #2a1b3d;
 $grey: #a4b3b6;
 $back: #d8c99b;
-$white: #ffffff;
+$white: #f7f7f7;
 
 // =========================font weight==================
-$normal: 500;
+$normal: 400;
+$medium: 600;
 $bold: 700;
 $bolder: 900;
+
+// =========================font Family==================
+
+// font-family: 'Poppins', sans-serif;
+$header-font: "Poppins", sans-serif;
+$body-font: "Poppins", sans-serif;
+$logo-font: "Poppins", sans-serif;
 
 //=========================font-sizes=======================
 $display: 4.5rem;
