@@ -31,9 +31,13 @@ h5 {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .side-nav {
   background: #2f2fa2;
-  color: #d8c99b;
+  color: #f7f7f7;
   width: 4vw;
   height: 100vh;
   border-radius: 0 1rem 1rem 0;
@@ -61,7 +65,7 @@ h5 {
 
 .side-nav .brand .logo {
   width: 100%;
-  background: #f7f7f7;
+  background: #fff;
   -webkit-clip-path: polygon(0% 20%, 30% 0%, 70% 0%, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0% 80%);
           clip-path: polygon(0% 20%, 30% 0%, 70% 0%, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0% 80%);
 }
@@ -73,7 +77,7 @@ h5 {
 
 .side-nav .brand .brand-name {
   font-weight: 900;
-  color: #d8c99b;
+  color: #f7f7f7;
   display: none;
   text-align: center;
   text-transform: uppercase;
@@ -131,7 +135,7 @@ h5 {
 
 .side-nav .navbar .nav-item .nav-link .nav-icon {
   width: 80%;
-  background: #f7f7f7;
+  background: #fff;
   -webkit-clip-path: polygon(0% 20%, 30% 0%, 70% 0%, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0% 80%);
           clip-path: polygon(0% 20%, 30% 0%, 70% 0%, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0% 80%);
 }
@@ -188,6 +192,7 @@ h5 {
 }
 
 .hero {
+  position: relative;
   min-height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,27 +200,46 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(164, 179, 182, 0.4)), to(rgba(216, 201, 155, 0.4)));
-  background: linear-gradient(rgba(164, 179, 182, 0.4), rgba(216, 201, 155, 0.4));
-  background-size: cover;
-  background-position: 50% 50%;
-  color: #f7f7f7;
+  padding-bottom: 60px;
+  background-image: url(../img/dev.svg);
+  background-color: #f7f7f7;
+  background-size: 150px 200px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.hero::before, .hero::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+.hero::after {
+  background-color: #fff;
+  -webkit-clip-path: polygon(0% 100%, 100% 11px, 100% 8px, 0% 57px, 0% 52px, 100% 3px, 100% 0%, 0% 49px);
+          clip-path: polygon(0% 100%, 100% 11px, 100% 8px, 0% 57px, 0% 52px, 100% 3px, 100% 0%, 0% 49px);
 }
 
 .hero .hero-content-wrapper p {
   font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: #2f2fa2;
+  color: #2a1b3d;
 }
 
 .hero .hero-content-wrapper .typing {
-  font-size: 4.5rem;
-  line-height: 6.75rem;
+  font-size: 4rem;
+  line-height: 6rem;
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  color: #f7f7f7;
   background-image: url("https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
   background-size: cover;
   background-repeat: no-repeat;
@@ -228,7 +252,7 @@ h5 {
   content: "";
   /* position: absolute; */
   width: 1px;
-  height: 95%;
+  height: 90%;
   margin-left: 5px;
   border-right: 2px solid #2f2fa2;
   -webkit-animation: blink 0.6s infinite ease;
@@ -306,7 +330,7 @@ h5 {
     transition: 0.5s ease-in;
   }
   .side-nav:hover .navbar .nav-item:hover .nav-text {
-    color: #f7f7f7;
+    color: #fff;
   }
   .side-nav:hover .social-icons {
     padding: 0 0.1vw;
@@ -334,7 +358,7 @@ h5 {
     transition: 0.3s linear;
   }
   .side-nav:hover .social-icons .social-icon:hover {
-    background: #f7f7f7;
+    background: #fff;
     -webkit-transform: translateY(-5px);
             transform: translateY(-5px);
   }

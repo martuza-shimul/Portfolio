@@ -1,45 +1,79 @@
 @import "./mixins";
 
 .hero {
+	position: relative;
 	min-height: 40vh;
 	display: flex;
 	align-items: center;
-	// justify-content: center;
+	padding-bottom: 60px;
+	// justify-content: flex-end;
 	// border-bottom: 1px solid $primary-color;
-	background: linear-gradient(rgba($grey, 0.4), rgba($back, 0.4));
+	// background: linear-gradient(rgba($white, 0.4), rgba($grey, 0.4)),
+	// 	url(../img/dev.svg);
 	// background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
 	// 	url("../img/image.jpg");
 	// background-blend-mode: multiply;
-	// background-color: $primary-color;
-	background-size: cover;
-	background-position: 50% 50%;
+	background-image: url(../img/dev.svg);
+	background-color: $back;
+	background-size: 150px 200px;
+	background-position: right center;
+	background-repeat: no-repeat;
 	color: $white;
+	// box-shadow: 0 2px 10px 3px rgba($text-color, 0.9);
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 0;
+		height: 60px;
+		width: 100%;
+		background-color: $back;
+	}
+	&::after {
+		background-color: $white;
+		clip-path: polygon(
+			0% 100%,
+			100% 11px,
+			100% 8px,
+			0% 57px,
+			0% 52px,
+			100% 3px,
+			100% 0%,
+			0% 49px
+		);
+	}
 	.hero-content-wrapper {
 		p {
 			font-size: $sub-header;
-			font-weight: $medium;
-			letter-spacing: 1px;
+			font-weight: $bold;
+			letter-spacing: 2px;
 			text-transform: uppercase;
-			color: $primary-color;
+			color: $text-color;
 		}
 		.typing {
 			// font-size: $display;
 			@include font-size($display);
 			font-weight: $bolder;
-			letter-spacing: 2px;
+			letter-spacing: 3px;
 			text-transform: uppercase;
+			color: $back;
 			background-image: url("https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
 			background-size: cover;
 			background-repeat: no-repeat;
 			-webkit-text-fill-color: transparent;
 			-webkit-background-clip: text;
 			background-clip: text;
+			// text-shadow: -3px 0 $primary-color, 0 3px $primary-color,
+			// 	3px 0 $primary-color, 0 -3px $primary-color;
+			// text-shadow: 0px 5px $primary-color;
 
 			&::after {
 				content: "";
 				/* position: absolute; */
 				width: 1px;
-				height: 95%;
+				height: 90%;
 				margin-left: 5px;
 				border-right: 2px solid $primary-color;
 				animation: blink 0.6s infinite ease;
