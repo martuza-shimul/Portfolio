@@ -30,7 +30,8 @@ const texts = [
 	"Shopify",
 	"BigCommerce",
 	"WordPress",
-	"ChatBot",
+	"Ai ChatBot",
+	"consultation",
 ];
 
 let count = 0;

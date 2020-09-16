@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
 .img-responsive {
+  max-width: 100%;
   width: 100%;
   height: auto;
 }
@@ -36,9 +37,13 @@ h5 {
   text-align: right;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 .side-nav {
-  background: #2f2fa2;
-  color: #f7f7f7;
+  background: #ebebeb;
+  color: #2a1b3d;
   width: 4vw;
   height: 100vh;
   border-radius: 0 1rem 1rem 0;
@@ -78,7 +83,7 @@ h5 {
 
 .side-nav .brand .brand-name {
   font-weight: 900;
-  color: #f7f7f7;
+  color: #2f2fa2;
   display: none;
   text-align: center;
   text-transform: uppercase;
@@ -166,7 +171,7 @@ h5 {
 }
 
 .side-nav .social-icons .social-icon {
-  background: #a4b3b6;
+  background: #fff;
   margin: 0.1vh 0;
   width: 50%;
   -webkit-clip-path: polygon(0% 20%, 30% 0%, 70% 0%, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0% 80%);
@@ -239,6 +244,7 @@ h5 {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
+  text-shadow: 10px 10px 25px #fff, -10px 10px 25px #fff, -10px -10px 25px #fff, 10px -10px 25px #fff;
 }
 
 .hero .hero-content-wrapper .typing {
@@ -283,6 +289,129 @@ h5 {
   100% {
     opacity: 1;
   }
+}
+
+.about {
+  margin-top: 15px;
+}
+
+.about .container .about-content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-bottom: 30px;
+}
+
+.about .container .about-content-wrapper .contact-info {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  background-color: #f7f7f7;
+  padding: 20px 10px 100px;
+  position: relative;
+}
+
+.about .container .about-content-wrapper .contact-info::after, .about .container .about-content-wrapper .contact-info::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  height: 60px;
+}
+
+.about .container .about-content-wrapper .contact-info::after {
+  left: 0;
+  -webkit-clip-path: polygon(30% 100%, 0 0, 0 100%);
+          clip-path: polygon(30% 100%, 0 0, 0 100%);
+}
+
+.about .container .about-content-wrapper .contact-info::before {
+  right: 0;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 70% 100%);
+          clip-path: polygon(100% 0, 100% 100%, 70% 100%);
+}
+
+.about .container .about-content-wrapper .contact-info .image-holder {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  min-height: 90px;
+}
+
+.about .container .about-content-wrapper .contact-info .image-holder img {
+  max-height: 180px;
+  max-width: 180px;
+  -webkit-clip-path: polygon(0% 20%, 30% 0%, 70% 0%, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0% 80%);
+          clip-path: polygon(0% 20%, 30% 0%, 70% 0%, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0% 80%);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  background-color: #fff;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -40%, 0);
+          transform: translate3d(-50%, -40%, 0);
+}
+
+.about .container .about-content-wrapper .contact-info .copy .titles {
+  margin-bottom: 30px;
+}
+
+.about .container .about-content-wrapper .contact-info .copy .titles h2 {
+  font-size: 2.7rem;
+  line-height: 4.05rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.about .container .about-content-wrapper .contact-info .copy .titles h3 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.about .container .about-content-wrapper .contact-info .copy .emails,
+.about .container .about-content-wrapper .contact-info .copy .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .container .about-content-wrapper .contact-info .copy .emails .email-addresses a,
+.about .container .about-content-wrapper .contact-info .copy .emails .phone-numbers a,
+.about .container .about-content-wrapper .contact-info .copy .phone .email-addresses a,
+.about .container .about-content-wrapper .contact-info .copy .phone .phone-numbers a {
+  display: block;
+}
+
+.about .container .about-content-wrapper .about-content {
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
 }
 
 @media screen and (max-width: 4000px) and (min-width: 768px) {

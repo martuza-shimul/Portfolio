@@ -6,14 +6,15 @@
 
 .side-nav {
 	// box-sizing: border-box;
-	background: $primary-color;
-	color: $back;
+	background: $nav-back;
+	color: $text-color;
 	width: 4vw;
 	height: 100vh;
 	border-radius: 0 1rem 1rem 0;
 	padding: 2vh 0.2vw;
 	display: grid;
 	align-content: space-between;
+	//box-shadow: 4px 0 16px 1px #cccccc;
 
 	.brand {
 		@include flex-direction-center(column);
@@ -28,7 +29,7 @@
 		}
 		.brand-name {
 			font-weight: $bolder;
-			color: $back;
+			color: $primary-color;
 			display: none;
 			text-align: center;
 			text-transform: uppercase;
@@ -90,7 +91,7 @@
 		@include flex-direction-center(column);
 
 		.social-icon {
-			background: $grey;
+			background: $white;
 			margin: 0.1vh 0;
 
 			width: 50%;
