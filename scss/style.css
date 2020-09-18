@@ -41,6 +41,30 @@ h5 {
   text-transform: uppercase;
 }
 
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #2f2fa2;
+  border: 3px solid #2f2fa2;
+  padding: 12px 25px;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  line-height: 1.95rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  display: inline-block;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #2f2fa2;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
 .side-nav {
   background: #ebebeb;
   color: #2a1b3d;
@@ -310,9 +334,9 @@ h5 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-bottom: 30px;
 }
 
@@ -375,19 +399,47 @@ h5 {
 }
 
 .about .container .about-content-wrapper .contact-info .copy .titles h2 {
-  font-size: 2.7rem;
-  line-height: 4.05rem;
+  font-size: 2rem;
+  line-height: 3rem;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
 }
 
 .about .container .about-content-wrapper .contact-info .copy .titles h3 {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  text-transform: uppercase;
 }
 
 .about .container .about-content-wrapper .contact-info .copy .emails,
-.about .container .about-content-wrapper .contact-info .copy .phone {
+.about .container .about-content-wrapper .contact-info .copy .phone,
+.about .container .about-content-wrapper .contact-info .copy .github {
+  padding: 0 2%;
+  margin: 0 auto 15px;
+}
+
+.about .container .about-content-wrapper .contact-info .copy .emails .email-addresses,
+.about .container .about-content-wrapper .contact-info .copy .emails .phone-numbers,
+.about .container .about-content-wrapper .contact-info .copy .phone .email-addresses,
+.about .container .about-content-wrapper .contact-info .copy .phone .phone-numbers,
+.about .container .about-content-wrapper .contact-info .copy .github .email-addresses,
+.about .container .about-content-wrapper .contact-info .copy .github .phone-numbers {
+  margin-left: 20px;
+}
+
+.about .container .about-content-wrapper .contact-info .copy .emails .email-addresses a,
+.about .container .about-content-wrapper .contact-info .copy .emails .phone-numbers a,
+.about .container .about-content-wrapper .contact-info .copy .phone .email-addresses a,
+.about .container .about-content-wrapper .contact-info .copy .phone .phone-numbers a,
+.about .container .about-content-wrapper .contact-info .copy .github .email-addresses a,
+.about .container .about-content-wrapper .contact-info .copy .github .phone-numbers a {
+  display: block;
+  text-align: left;
+  color: #2a1b3d;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,16 +450,26 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.about .container .about-content-wrapper .contact-info .copy .emails .email-addresses a,
-.about .container .about-content-wrapper .contact-info .copy .emails .phone-numbers a,
-.about .container .about-content-wrapper .contact-info .copy .phone .email-addresses a,
-.about .container .about-content-wrapper .contact-info .copy .phone .phone-numbers a {
-  display: block;
+.about .container .about-content-wrapper .contact-info .copy .emails .email-addresses a img,
+.about .container .about-content-wrapper .contact-info .copy .emails .phone-numbers a img,
+.about .container .about-content-wrapper .contact-info .copy .phone .email-addresses a img,
+.about .container .about-content-wrapper .contact-info .copy .phone .phone-numbers a img,
+.about .container .about-content-wrapper .contact-info .copy .github .email-addresses a img,
+.about .container .about-content-wrapper .contact-info .copy .github .phone-numbers a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.about .container .about-content-wrapper .contact-info .copy .emails .email-addresses a:hover,
+.about .container .about-content-wrapper .contact-info .copy .emails .phone-numbers a:hover,
+.about .container .about-content-wrapper .contact-info .copy .phone .email-addresses a:hover,
+.about .container .about-content-wrapper .contact-info .copy .phone .phone-numbers a:hover,
+.about .container .about-content-wrapper .contact-info .copy .github .email-addresses a:hover,
+.about .container .about-content-wrapper .contact-info .copy .github .phone-numbers a:hover {
+  color: #2f2fa2;
 }
 
 .about .container .about-content-wrapper .about-content {
@@ -506,6 +568,37 @@ h5 {
   .hero {
     min-height: 38vh;
   }
+  .about .container .about-content-wrapper .contact-info .copy .titles h2 {
+    font-size: 2.7rem;
+    line-height: 4.05rem;
+  }
+  .about .container .about-content-wrapper .contact-info .copy .titles h3 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  .about .container .about-content-wrapper .contact-info .copy .emails,
+  .about .container .about-content-wrapper .contact-info .copy .phone,
+  .about .container .about-content-wrapper .contact-info .copy .github {
+    padding: 0 7%;
+  }
+  .about .container .about-content-wrapper .contact-info .copy .emails .email-addresses a,
+  .about .container .about-content-wrapper .contact-info .copy .emails .phone-numbers a,
+  .about .container .about-content-wrapper .contact-info .copy .phone .email-addresses a,
+  .about .container .about-content-wrapper .contact-info .copy .phone .phone-numbers a,
+  .about .container .about-content-wrapper .contact-info .copy .github .email-addresses a,
+  .about .container .about-content-wrapper .contact-info .copy .github .phone-numbers a {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+  .about .container .about-content-wrapper .contact-info .copy .emails .email-addresses a img,
+  .about .container .about-content-wrapper .contact-info .copy .emails .phone-numbers a img,
+  .about .container .about-content-wrapper .contact-info .copy .phone .email-addresses a img,
+  .about .container .about-content-wrapper .contact-info .copy .phone .phone-numbers a img,
+  .about .container .about-content-wrapper .contact-info .copy .github .email-addresses a img,
+  .about .container .about-content-wrapper .contact-info .copy .github .phone-numbers a img {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -564,6 +657,7 @@ h5 {
     top: 0;
     -webkit-transition: all 0.6s ease-out;
     transition: all 0.6s ease-out;
+    z-index: 100;
   }
   .side-nav.scrolled .brand .logo {
     width: 5%;
@@ -722,6 +816,80 @@ h5 {
   .hero::before, .hero::after {
     background: #fff;
   }
+  .about {
+    margin-top: 15px;
+  }
+  .about .container .about-content-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about .container .about-content-wrapper .contact-info {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .about .container .about-content-wrapper .contact-info .copy .titles h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .about .container .about-content-wrapper .contact-info .copy .titles h3 {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    text-transform: capitalize;
+  }
+  .about .container .about-content-wrapper .contact-info .copy .emails,
+  .about .container .about-content-wrapper .contact-info .copy .phone,
+  .about .container .about-content-wrapper .contact-info .copy .github {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 2%;
+  }
+  .about .container .about-content-wrapper .contact-info .copy .emails .email-addresses a,
+  .about .container .about-content-wrapper .contact-info .copy .emails .phone-numbers a,
+  .about .container .about-content-wrapper .contact-info .copy .phone .email-addresses a,
+  .about .container .about-content-wrapper .contact-info .copy .phone .phone-numbers a,
+  .about .container .about-content-wrapper .contact-info .copy .github .email-addresses a,
+  .about .container .about-content-wrapper .contact-info .copy .github .phone-numbers a {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .container .about-content-wrapper .contact-info .copy .emails .email-addresses a img,
+  .about .container .about-content-wrapper .contact-info .copy .emails .phone-numbers a img,
+  .about .container .about-content-wrapper .contact-info .copy .phone .email-addresses a img,
+  .about .container .about-content-wrapper .contact-info .copy .phone .phone-numbers a img,
+  .about .container .about-content-wrapper .contact-info .copy .github .email-addresses a img,
+  .about .container .about-content-wrapper .contact-info .copy .github .phone-numbers a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+  }
+  .about .container .about-content-wrapper .about-content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 @media screen and (max-width: 570px) {
@@ -746,6 +914,33 @@ h5 {
     font-size: 2rem;
     line-height: 3rem;
   }
+  .about .container .about-content-wrapper .contact-info .copy .titles h2 {
+    font-size: 1.7rem;
+    line-height: 2.55rem;
+  }
+  .about .container .about-content-wrapper .contact-info .copy .titles h3 {
+    font-size: 1.1rem;
+    line-height: 1.65rem;
+  }
+  .about .container .about-content-wrapper .contact-info .copy .emails .email-addresses a,
+  .about .container .about-content-wrapper .contact-info .copy .emails .phone-numbers a,
+  .about .container .about-content-wrapper .contact-info .copy .phone .email-addresses a,
+  .about .container .about-content-wrapper .contact-info .copy .phone .phone-numbers a,
+  .about .container .about-content-wrapper .contact-info .copy .github .email-addresses a,
+  .about .container .about-content-wrapper .contact-info .copy .github .phone-numbers a {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+  .about .container .about-content-wrapper .contact-info .copy .emails .email-addresses a img,
+  .about .container .about-content-wrapper .contact-info .copy .emails .phone-numbers a img,
+  .about .container .about-content-wrapper .contact-info .copy .phone .email-addresses a img,
+  .about .container .about-content-wrapper .contact-info .copy .phone .phone-numbers a img,
+  .about .container .about-content-wrapper .contact-info .copy .github .email-addresses a img,
+  .about .container .about-content-wrapper .contact-info .copy .github .phone-numbers a img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
 }
 
 * {
@@ -753,7 +948,8 @@ h5 {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 14px;
+  font-size: 16px;
+  word-break: break-word;
 }
 
 body {

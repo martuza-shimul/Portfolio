@@ -8,8 +8,11 @@
 		.about-content-wrapper {
 			@include flex-direction-center(row);
 			justify-content: space-between;
-			align-items: stretch;
+			align-items: flex-start;
 			margin-bottom: 30px;
+			// @media (max-width: 767px) {
+			// 	flex-direction: column;
+			// }
 			// padding: 15px 0;
 			.contact-info {
 				// border: 1px solid red;
@@ -62,30 +65,49 @@
 					}
 				}
 				.copy {
+					// text-align: center;
 					.titles {
 						margin-bottom: 30px;
 						h2 {
-							@include font-size($header);
+							@include font-size($header-md);
 							font-weight: $normal;
 							font-family: $header-font;
 						}
 						h3 {
-							@include font-size($sub-header);
+							@include font-size($sub-header-md);
+							text-transform: uppercase;
 						}
 					}
 					.emails,
-					.phone {
-						@include flex-direction-center(row);
-						justify-content: center;
+					.phone,
+					.github {
+						// width: 80%;
+						padding: 0 2%;
+						margin: 0 auto 15px;
 
-						// .icon {
-						// 	// flex-basis: 15%;
-						// }
 						.email-addresses,
 						.phone-numbers {
 							// flex-basis: 80%;
+							margin-left: 20px;
+
 							a {
 								display: block;
+								text-align: left;
+								color: $text-color;
+								text-decoration: none;
+								@include font-size($base-md);
+								font-weight: 500;
+								@include flex-direction-center(row);
+
+								img {
+									width: 20px;
+									height: 20px;
+									margin-right: 15px;
+								}
+
+								&:hover {
+									color: $primary-color;
+								}
 							}
 						}
 					}

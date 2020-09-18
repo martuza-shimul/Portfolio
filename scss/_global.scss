@@ -35,3 +35,24 @@ h5 {
 .text-uppercase {
 	text-transform: uppercase;
 }
+
+.btn {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $white;
+	background: $primary-color;
+	border: 3px solid $primary-color;
+	padding: 12px 25px;
+	margin-top: 20px;
+	@include font-size($button);
+	font-weight: 600;
+	letter-spacing: 2px;
+	display: inline-block;
+	transition: 0.3s linear;
+
+	&:hover {
+		background: transparent;
+		color: $primary-color;
+		transition: 0.3s linear;
+	}
+}
